@@ -1,0 +1,42 @@
+body {
+	background-color: #ffe21c;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/15th-TSAA_index_bg.jpg);
+}
+.TSAAlink01 {
+	font-family: "Noto Mono";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 22px;
+	text-decoration: underline;
+	color: #454545;
+}
+.TSAAindextime {
+	font-family: "Noto Mono";
+	font-size: 12px;
+	line-height: 22px;
+	color: #999;
+}
+.TSAAindextitle01 {
+	font-family: "Noto Mono";
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000;
+}
+.TSAAindextext {
+	font-family: "Noto Mono";
+	font-size: 14px;
+	line-height: 26px;
+	color: #333;
+}
+.TSAAindex02 {
+	font-family: "Noto Mono";
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: lighter;
+	color: #000;
+}
