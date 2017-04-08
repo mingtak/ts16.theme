@@ -26,8 +26,15 @@ hr {
 #ts-row3 li { list-style-type:none}
 
 /* 主選單 */
+#ts-row4-rwd-sticky-wrapper {display:none}
 #ts-row4 .row {padding-right:25px}
 #ts-row4 li { list-style-type:none}
+
+/* 主選單RWD */
+#ts-row4-rwd { display:none;}
+#ts-row4-rwd nav { display: none}
+#ts-row4-rwd .navswitch {margin:10px 5px 35px 0}
+#ts-row4-rwd nav { z-index:100000}
 
 /* 最新消息 */
 #ts-row5 .container {baackground:#fff; background-image:url("images/15th-TSAA_index_24.jpg")}
@@ -43,6 +50,7 @@ hr {
 #ts-row6 ul.nav li a {border:initial; padding:0; margin:0}
 #ts-row6 .tab-content .row {margin:initial}
 #ts-row6 .tab-content .row div {padding:10px 23px;}
+#ts-row6 .tab-content .row div img { width:100% }
 
 #ts-row7 .row div {max-width: 100%; overflow: hidden; padding:0}
 #ts-row7 .row div img { width: 100% }
@@ -87,27 +95,27 @@ hr {
 #ts-row13 .copyright { margin-top:30px; font-size:12px}
 
 
+/* ts-document-view */
+#ts-document-view { margin: 30px 0 0 0; }
+#ts-document-view .row { background-color:#fff57a; padding:30px}
 
 
 
 
+@media(max-width: 767px) {
 
+/* 暫時 */
+#ts-headerq, #ts-row3 { display:none }
 
+.ts-row .container{ width:100% }
+#ts-header-bn, #ts-row4, #ts-row4-1, #ts-row2{display: none}
+#ts-row7 #ts-row7-totop img {width:241px; float:right}
+#ts-row9 .row div img { width: 315px; float:right}
+#ts-row12 .title { font-size:14px}
+#ts-row4-rwd { display:initial; }
+#ts-row4-sticky-wrapper {display:none}
+#ts-row4-rwd-sticky-wrapper{display:block;}
+#ts-row4-rwd nav ul { padding: 30px 5px }
+#ts-row4-rwd nav ul li { list-style-type:none; font-size:18px; margin:10px}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

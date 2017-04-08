@@ -18,4 +18,13 @@
       directory="static"
       />
 
+  <browser:page
+      name="ts15_macro"
+      for="*"
+      class=".views.Ts15Macro"
+      template="template/ts15_macro.pt"
+      layer="ts16.theme.interfaces.ITs16ThemeLayer"
+      permission="zope2.View"
+  />
+
 </configure>

@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    lang="en"
+    metal:use-macro="context/main_template/macros/master"
+    i18n:domain="plone">
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:content-core define-macro="content-core"
+                    tal:define="toc context/table_of_contents|nothing;">
+
+
+<?python
+from plone import api
+portal = api.portal.get()
+prefix = '%s/++theme++taishin-16th/' % portal.absolute_url()
+img_field_name = []
+for i in range(10):
+    if getattr(context, 'bigImage_%s' % (i+1), None):
+        img_field_name.append('bigImage_%s' % (i+1))
+?>
+
+
+<metal:macro use-macro="context/@@ts15_macro/macros/ts_header"/>
+<metal:macro use-macro="context/@@ts15_macro/macros/ts-row2"/>
+<metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-doc"/>
+<metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-1"/>
+
+  <section class="ts-document-view ts-row" id="ts-document-view">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+<metal:macro use-macro="context/@@ts15_macro/macros/bxslider"/>
+
+  <div id="parent-fieldname-text"
+      tal:condition="context/text"
+      tal:content="structure python:context.text.output_relative_to(view.context)"
+      tal:attributes="class python: toc and 'pat-autotoc' or ''" />
+</div>
+</div>
+</div>
+</section>
+
+<metal:macro use-macro="context/@@ts15_macro/macros/ts-row13"/>
+
+<script>
+$('.bxslider').bxSlider({
+  auto: true,
+  pager: false,
+  adaptiveHeight: true,
+  autoControls: true,
+});
+</script>
+
+</metal:content-core>
+</metal:content-core>
+
+</body>
+</html>
