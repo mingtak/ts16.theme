@@ -22,8 +22,8 @@ for i in range(10):
         img_field_name.append('bigImage_%s' % (i+1))
 ?>
 
-
-<metal:macro use-macro="context/@@ts15_macro/macros/ts_header"/>
+<metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-rwd-doc"/>
+<!--<metal:macro use-macro="context/@@ts15_macro/macros/ts_header"/> -->
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row2"/>
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-doc"/>
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-1"/>
@@ -45,6 +45,13 @@ for i in range(10):
 
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row13"/>
 
+<div class="fixed">
+    <a href="${portal/absolute_url}#ts-row12">
+        <img class="pull-right" src="${prefix}images/vote_btn.png"/>
+    </a>
+</div>
+
+
 <script>
 $('.bxslider').bxSlider({
   auto: true,
@@ -53,6 +60,33 @@ $('.bxslider').bxSlider({
   autoControls: true,
 });
 </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#navswitch").click(function(){
+      $("nav").toggle('slow');
+  });
+  $("nav ul li").click(function(){
+      $("nav").hide('slow');
+  });
+});
+</script>
+
+<script>
+  $(document).ready(function(){
+    $("#ts-row4").sticky({topSpacing:0, zIndex:10000});
+    var w = $(window).width();
+    if(w<=767){
+        $(window).scroll(function(){
+            $("#ts-row4-rwd").sticky({topSpacing:0, zIndex:10000});
+            if($("#ts-row4-rwd").scrollTop() == 0){
+                $("#ts-row4-rwd-sticky-wrapper").css("height", "auto");
+            }
+        });
+    }
+  });
+</script>
+
 
 </metal:content-core>
 </metal:content-core>

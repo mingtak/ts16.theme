@@ -12,6 +12,8 @@ hr {
 .bg-eee {background:#eee}
 .bg-y1 {background:#fff57a}
 .bg-y2 {background:#ffe21c}
+* {font-family:'Noto Sans TC', 'FontAwesome' !important}
+
 
 /* 主視覺 */
 .ts-header .container .row div { text-align:center; padding:initial }
@@ -45,11 +47,19 @@ hr {
 /* 入圍作品 */
 #ts-row6 .bg-img {text-align:left}
 #ts-row6 .container .row div {padding:0}
-#ts-row6 ul { padding-left: 0}
-#ts-row6 ul li { list-style-type:none; float:left}
-#ts-row6 ul.nav li a {border:initial; padding:0; margin:0}
+#ts-row6 ul { padding-left: 50px}
+#ts-row6 ul li {
+    list-style-type:none; float:left;
+    font-size:16px;
+    border:solid 1px #ddd; border-radius:10px;
+    margin-right:10px;
+}
+#ts-row6 ul li:hover {background-color:#eee}
+#ts-row6 ul li.active {background-color:#ffe21c}
+#ts-row6 ul li a {display:block; margin:3px 15px; border:initial; letter-spacing:4px}
+#ts-row6 ul li.active a {background-color:initial; width:100%}
 #ts-row6 .tab-content .row {margin:initial}
-#ts-row6 .tab-content .row div {padding:10px 23px;}
+#ts-row6 .tab-content .row div {padding:10px 18px;}
 #ts-row6 .tab-content .row div img { width:100% }
 
 #ts-row7 .row div {max-width: 100%; overflow: hidden; padding:0}
@@ -99,7 +109,20 @@ hr {
 #ts-document-view { margin: 30px 0 0 0; }
 #ts-document-view .row { background-color:#fff57a; padding:30px}
 
+/* 右下fixed */
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+div.fixed img { width: 70% }
 
+
+
+/* 內容頁 */
+#parent-fieldname-text img{max-width:100%}
+
+/* bxslider */
 
 
 @media(max-width: 767px) {
@@ -117,5 +140,6 @@ hr {
 #ts-row4-rwd-sticky-wrapper{display:block;}
 #ts-row4-rwd nav ul { padding: 30px 5px }
 #ts-row4-rwd nav ul li { list-style-type:none; font-size:18px; margin:10px}
+div.fixed img { width: 40% }
 
 }

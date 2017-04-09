@@ -13,7 +13,9 @@
     <div id="bxslider" tal:condition="img_field_name">
         <ul class="bxslider">
             <li tal:repeat="item img_field_name">
-                <img src="${context/absolute_url}/@@images/${item}/large"/>
+<div style="max-width:100%; overflow:hidden">
+                <img src="${context/absolute_url}/@@images/${item}/bigger"/>
+</div>
             </li>
         </ul>
     </div>
@@ -57,7 +59,7 @@
     <div class="col-md-6">
       <ul>
         <li tal:repeat="item items">
-          <a href="${item/getURL}">${python:item.created.strftime('%m.%d %H:%M')} ${python:item.Title[:60]}${python:'...' if len(item.Title)>60 else ''}</a>
+          <a href="${item/getURL}">${python:item.created.strftime('%m.%d')} ${python:item.Title[:60]}${python:'...' if len(item.Title)>60 else ''}</a>
         </li>
       </ul>
     </div>
@@ -99,12 +101,12 @@
     <div class="col-md-12">
 <nav>
       <ul>
-        <li><a href="#ts-row5">最新消息</a></li>
-        <li><a href="#ts-row6">入圍作品</a></li>
-        <li><a href="#ts-row8">文件展</a></li>
-        <li><a href="#ts-row10">國際決審會客室</a></li>
-        <li><a href="#ts-row11">關於台新藝術獎</a></li>
-        <li><a href="#ts-row12">我心目中的得主</a></li>
+        <li><a href="#ts-row5"><i class="fa fa-angle-double-right"></i> 最新消息</a></li>
+        <li><a href="#ts-row6"><i class="fa fa-angle-double-right"></i> 入圍作品</a></li>
+        <li><a href="#ts-row8"><i class="fa fa-angle-double-right"></i> 文件展</a></li>
+        <li><a href="#ts-row10"><i class="fa fa-angle-double-right"></i> 國際決審會客室</a></li>
+        <li><a href="#ts-row11"><i class="fa fa-angle-double-right"></i> 關於台新藝術獎</a></li>
+        <li><a href="#ts-row12"><i class="fa fa-angle-double-right"></i> 我心目中的得主</a></li>
         <li class="pull-left"><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
         <li class="pull-left"><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
       </ul>
@@ -142,6 +144,37 @@
 </div>
 </section>
 </metal:row>
+
+
+<!-- Row4-rwd-doc -->
+<metal:row define-macro="ts-row4-rwd-doc">
+<section class="ts-row" id="ts-row4-rwd">
+<div class="container">
+  <div class="row bg-y2">
+    <div class="col-md-12">
+<nav>
+      <ul>
+        <li><a href="${portal/absolute_url}#ts-row5"><i class="fa fa-angle-double-right"></i> 最新消息</a></li>
+        <li><a href="${portal/absolute_url}#ts-row6"><i class="fa fa-angle-double-right"></i> 入圍作品</a></li>
+        <li><a href="${portal/absolute_url}#ts-row8"><i class="fa fa-angle-double-right"></i> 文件展</a></li>
+        <li><a href="${portal/absolute_url}#ts-row10"><i class="fa fa-angle-double-right"></i> 國際決審會客室</a></li>
+        <li><a href="${portal/absolute_url}#ts-row11"><i class="fa fa-angle-double-right"></i> 關於台新藝術獎</a></li>
+        <li><a href="${portal/absolute_url}#ts-row12"><i class="fa fa-angle-double-right"></i> 我心目中的得主</a></li>
+        <li class="pull-left"><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+        <li class="pull-left"><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+      </ul>
+</nav>
+    </div>
+<div class="col-md-12 navswitch">
+    <a href="javascript:void()" id="navswitch" class="pull-right">
+        <i class="fa fa-bars fa-2x"></i>
+    </a>
+</div>
+  </div>
+</div>
+</section>
+</metal:row>
+
 
 <!-- Row4-1 -->
 <metal:row define-macro="ts-row4-1">
@@ -197,12 +230,13 @@
     </div>
     <div class="col-md-12"> <!-- tabs -->
 
-
-<ul class="nav nav-tabs"> <!-- active 要 js 改圖片 *ro.jpg -->
-  <li class="active"><a data-toggle="tab" href="#tab-all" class="tab-all"><img src="${prefix}images/15th-TSAA_index_34.jpg" /></a></li>
-  <li><a data-toggle="tab" href="#tab01" class="tab01"><img src="${prefix}images/15th-TSAA_index_35.jpg" /></a></li>
-  <li><a data-toggle="tab" href="#tab02" class="tab02"><img src="${prefix}images/15th-TSAA_index_36.jpg" /></a></li>
-</ul>
+<div class="col-md-12">
+    <ul class="nav nav-tabs"> <!-- active 要 js 改圖片 *ro.jpg -->
+        <li class="active"><a data-toggle="tab" href="#tab-all" class="tab-all">全部</a></li>
+        <li><a data-toggle="tab" href="#tab01" class="tab01">表演藝術</a></li>
+        <li><a data-toggle="tab" href="#tab02" class="tab02">視覺藝術</a></li>
+    </ul>
+</div>
 <div class="tab-content">
   <div id="tab-all" class="tab-pane fade in active">
     <div class="row" tal:repeat="row python:range(int(math.ceil(len(all_brain)/4.0)))">
@@ -436,16 +470,19 @@ Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講�
         </div>
     </div>
     <div class="col-md-12">
-        <p class="title">【為心中所屬，投下鼓舞的一票！】</p>
+        <br>
+        <p class="title">4/20【為您所看好的作品，投下支持的一票】</p>
     </div>
+<!--
     <div class="col-md-12">
         <div class="info">
             <p>選出你心目中的得主，為藝術家及團隊在漫長的創作路上，點亮一顆星，給他們鼓勵與支持的力量。<br>每日以Facebook帳號登入，可以對19件入圍作品進行一次投票。參與投票者就有機會把好禮帶回家。</p>
             <a href="#"><u>活動辦法</u></a>
         </div>
     </div>
+-->
   </div>
-
+<!--
   <div class="row">
     <div class="col-md-6">
         <div class="award-img">
@@ -472,8 +509,11 @@ Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講�
         </div>
     </div>
   </div>
+-->
+
 
   <div class="row">
+<!--
     <div class="col-md-3"></div>
     <div class="col-md-6 bottom">
 
@@ -485,9 +525,11 @@ Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講�
 
     </div>
     <div class="col-md-3"></div>
+-->
     <div class="col-md-12">
         <a href="#"><img src="${prefix}images/15th-TSAA_index_91.png" class="pull-right to-top"></a>
     </div>
+
   </div>
 
 </div>
@@ -503,8 +545,12 @@ Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講�
   <div class="row bg-w">
     <div class="col-md-6 col-xs-12">
       <div class="footer-img">
-          <img src="${prefix}images/15th-TSAA_index_95.jpg">
-          <img src="${prefix}images/15th-TSAA_index_96.jpg">
+          <a href="http://talks.taishinart.org.tw/" target="_blank">
+              <img src="${prefix}images/15th-TSAA_index_95.jpg">
+          </a>
+          <a href="http://artsawardarchive.taishinart.org.tw/" target="_blank">
+              <img src="${prefix}images/15th-TSAA_index_96.jpg">
+          </a>
       </div>
       <div class="copyright">
           <p>版權所有©台新銀行文化藝術基金會</p>
@@ -514,7 +560,9 @@ Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講�
     <div class="col-md-6 col-xs-12">
       <div class="sponser">
           <img src="${prefix}images/15th-TSAA_index_99.jpg"/>
-          <img src="${prefix}images/15th-TSAA_index_102.jpg"/>
+          <a href="https://www.taishinbank.com.tw" target="_blank">
+              <img src="${prefix}images/15th-TSAA_index_102.jpg"/>
+          </a>
           <img src="${prefix}images/15th-TSAA_index_103.jpg"/>
       </div>
     </div>
