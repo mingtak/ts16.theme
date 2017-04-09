@@ -12,8 +12,7 @@ hr {
 .bg-eee {background:#eee}
 .bg-y1 {background:#fff57a}
 .bg-y2 {background:#ffe21c}
-* {font-family:'Noto Sans TC', 'FontAwesome' !important}
-
+* {font-family:'Noto Sans TC', 'FontAwesome'}
 
 /* 主視覺 */
 .ts-header .container .row div { text-align:center; padding:initial }
@@ -122,7 +121,12 @@ div.fixed {
 }
 div.fixed img { width: 70% }
 
-
+/* 倒數計時 */
+#ts_countdown {background-color:#ddd;}
+#ts_countdown h4 {padding:0 30px; margin:8px 0 2px 0}
+#ts_countdown p.ts_countdown { font-size:10px; padding:0 30px}
+#ts_countdown #getting-started{padding:0 0 30px 0}
+#ts_countdown .ts_countdown span {font-family:'28DayFont', 'Noto Sans TC'; font-size:35px}
 
 /* 內容頁 */
 #parent-fieldname-text img{max-width:100%}
@@ -132,8 +136,8 @@ table {width:100% !important}
 
 @media(max-width: 767px) {
 
-/* 暫時 */
-#ts-row3 { display:none }
+#ts-row3 .row .col-md-6:first-child { display:none }
+#ts-row3 div.container.bg-y1 {background-color:#ddd}
 
 .ts-row .container{ width:100% }
 #ts-header-bn, #ts-row4, #ts-row4-1, #ts-row2{display: none}

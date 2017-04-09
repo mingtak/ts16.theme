@@ -75,7 +75,17 @@
         </li>
       </ul>
     </div>
-    <div class="col-md-6"><img src="${prefix}images/15th-TSAA_index_08.jpg"></div>
+    <div class="col-md-6" id="ts_countdown">
+        <!--<img src="${prefix}images/15th-TSAA_index_08.jpg">-->
+
+<h4>5/13 14:00 頒獎倒數</h4>
+<div id="getting-started"></div>
+<script type="text/javascript">
+  $('#getting-started').countdown('2017/05/13 14:00', function(event) {
+    $(this).html(event.strftime('<p class="ts_countdown"><span class="day">%D</span> 天 <span class="hour">%H</span> 時 <span class="minute">%M</span> 分 <span class="second">%S</span> 秒 </p>'));
+  });
+</script>
+    </div>
   </div>
 </div>
 </section>
@@ -217,9 +227,10 @@
       <p class="TSAAindextitle01"><u><a href="${item/getURL}">${item/Title}</a></u></p>
     <p class="TSAAindextext">${item/Description}</p>
     <hr tal:condition="not:repeat/item/end">
-    <a href="/news" tal:condition="repeat/item/end">
+    <a href="/" tal:condition="repeat/item/end">
         <img class="read-more" src="${prefix}images/15th-TSAA_index_25.jpg"/>
     </a>
+
 </div>
     </div>
   </div>
@@ -314,21 +325,11 @@
   </div>
   <div class="row bg-eee">
     <div class="col-md-7 info">
-        <p class="time">時間:</p>
-        <p class="location">地點:</p>
+        <p class="time">時間: 2017/04/10-5/26 每日 9:00am-7:00pm</p>
+        <p class="location">地點: 台新金控 一樓大廳 (台北市仁愛路四段118號)</p>
         <p class="detail">
-本次台新獎入圍作品文件展的展場設計概念導入了「大量交織」的設計理念，
-以客製化鋁梯作為空間構築的主要工藝，並將表演藝術及視覺藝術以「多樣
-化的空間」、「各種姿態的身體」及「創作的工作狀態」三組關鍵字進行詮釋。
-在此一空間裝置中，藝術創作者在工作狀態中相當孰悉的鋁梯轉化成多組爬
-梯、樓梯，與各種形狀的箱籠空間、平台交錯構成，除了身體在其中可以敏感
-的感受到空間的引導或限制，藉由五組電視屏幕中不斷流動的影像，在鋁梯
-構築起的空間裝置中也邀請觀者在各種變形的身體樣態下，去感受19組在影
-像中顯像的殊異創作世界。觀者的身體在此一裝置中進行各種空間與視覺體
-驗的同時，也將感受到裝置所在的大廳既有旋轉梯的空間演出性，而前往二
-樓參與頒獎開幕的觀者，也將在旋轉梯的爬昇過程中，藉由緩步繞行此一裝
-置，感受19組入圍者在此一空間裝置中所疊合構成的第十五屆台新獎的藝術
-世界。
+第十五屆台新藝術獎特別邀請擅長以微型空間引動環境、議題思維的建築學者蕭有志，於台新金控一樓大廳策畫入圍作品文件展。
+展場導入「大量交織」的設計理念，以客製化鋁梯作為空間構築的主要工藝，並將入圍作品以「多樣化的空間」、「各種姿態的身體」及「創作的工作狀態」三組關鍵字進行詮釋。在此一空間裝置中，藝術創作者在工作狀態中相當熟悉的鋁梯轉化成多組爬梯、樓梯，與各種形狀的箱籠空間、平台交錯構成，除了身體在其中可以敏銳的感受到空間的引導或限制，藉由電視屏幕中不斷流動的影像，在鋁梯構築起的空間裝置中也邀請觀者在各種變形的身體樣態下，去感受19組入圍作品在影像中顯像的殊異創作世界。
         </p>
     </div>
     <div class="col-md-5 show-img">
@@ -368,40 +369,47 @@
         </div>
     </div>
     <div class="col-md-12">
-     <div class="info">
-      <p class="TSAAindextime">5.6 (六) 14:00-16:00</p>
-      <p class="TSAAindextitle01">劇場是什麼？劇場在哪裡？</p>
-      <p class="TSAAindex02">主講人：林克歡/ 北京戲劇學家<p>
-      <p class="talker">主持/對談：鴻鴻</p>
-      <div class="text">「策展」如何在當代視覺與表演藝術領域中被實踐?<br>
-「國際決審會客室」是台新銀行文化藝術基金會特別為參與今年台新藝術獎的國際決選Frie Leysen (弗莉雅．蕾森) ，以及
-Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講座。<br>
-歐洲重量級藝術節總監，亦是比利時安特衛普藝術節及布魯塞爾藝術節創辦人弗莉雅．蕾森，將分享三十五年藝術節策展經
-驗，以及如何選節目、如何挖掘潛力藝術家的個人策展哲學；日本東京都寫真美術館首席策展人笠原美智子，曾策展2005年威
-尼斯雙年展日本館，也將分享她二十五年來的攝影策展經歷，以及日本攝影策展的現況與未來。      
-      </div>
-      <p class="TSAAindextext">地點: 台新金控大樓元廳 (台北市仁愛路四段118號2樓)</p>
-      <p>本活動免費參加，請先線上報名</p>
-     </div>
+        <div class="info">
+            「國際決審會客室」是台新銀行文化藝術基金會特別為今年台新藝術獎國際決選委員 Ｍartin Sturm (馬丁．史圖)、Jeff Khan(傑夫．可汗) 、以及Ong Keng Sen (王景生)所舉辦的講座。三位來自歐、澳、亞，皆是國際當代藝術場館與藝術節重要推手，將分別與台灣知名策展人徐文瑞，以及詩人導演鴻鴻對談，激盪最尖端的策展經驗與思維！
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="info">
+            <h4>國際決審會客室(一)</h4>
+            <h3>這裡，我們跨界交鋒！</h3>
+            <h4>Here! We Collide and Spark in Interdisciplinary Practices </h4>
+            <p><b>時間│5.13(六) 19:00-21:00</b></p>
+            <p><b>地點│台新金控大樓元廳 (台北市仁愛路四段118號2樓)</b></p>
+            <p><b>主講│Martin Sturm馬丁．史圖 ／奧地利林茲OK當代藝術中心總監Jeff Khan傑夫．可汗／ 澳洲雪梨Performance Space藝術總監</b></p>
+            <p><b>主持│徐文瑞 /獨立策展人、藝評家</b></p>
+            <p>Martin Sturm 馬丁．史圖擔任林茲OK當代藝術中心總監長達25年，挖掘並開創大量實驗性的藝術策展，如「天空之城」，是林茲2009年「歐洲文化首都年」最大規模策展，至今影響深遠。Performance Space藝術總監Jeff Khan傑夫・可汗將1880年代的火車機房搖身變成多元且當代的表演藝術與策展空間，開發各種場域的當代藝術可能性，與在地社群建立互動。兩位分別來自視覺藝術和表演藝術領域，都是致力於挖掘新的跨界創作與實踐，這裡有什麼新興的美學課題是值得討論的?在藝術的展演空間上有何什麼新的媒合、交集或衝撞？</p>
+
+<p>◎現場英文逐步口譯。</p>
+<p>◎本活動免費參加，請先線上報名 <a target="_blank" href="http://www.taishinart.org.tw/chinese/9_registration/02_detail.php?pid=183">立即報名</a></p>
+
+        </div>
     </div>
   </div>
 
   <div class="row even">
     <div class="col-md-12">
      <div class="info">
-      <p class="TSAAindextime">5.6 (六) 14:00-16:00</p>
-      <p class="TSAAindextitle01">劇場是什麼？劇場在哪裡？</p>
-      <p class="TSAAindex02">主講人：林克歡/ 北京戲劇學家<p>
-      <p class="talker">主持/對談：鴻鴻</p>
-      <div class="text">「策展」如何在當代視覺與表演藝術領域中被實踐?<br>
-「國際決審會客室」是台新銀行文化藝術基金會特別為參與今年台新藝術獎的國際決選Frie Leysen (弗莉雅．蕾森) ，以及
-Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講座。<br>
-歐洲重量級藝術節總監，亦是比利時安特衛普藝術節及布魯塞爾藝術節創辦人弗莉雅．蕾森，將分享三十五年藝術節策展經
-驗，以及如何選節目、如何挖掘潛力藝術家的個人策展哲學；日本東京都寫真美術館首席策展人笠原美智子，曾策展2005年威
-尼斯雙年展日本館，也將分享她二十五年來的攝影策展經歷，以及日本攝影策展的現況與未來。      
-      </div>
-      <p class="TSAAindextext">地點: 台新金控大樓元廳 (台北市仁愛路四段118號2樓)</p>
-      <p>本活動免費參加，請先線上報名</p>
+
+
+            <h4>國際決審會客室（二） </h4>
+            <h3>劇場的跨文化旅程</h3>
+            <h4>An inter-cultural Quest in Theatre</h4>
+            <p><b>時間│5.14(日) 14:00-16:00</b></p>
+            <p><b>地點│台新金控大樓元廳 (台北市仁愛路四段118號2樓)</b></p>
+            <p><b>主講│Ong Keng Sen王景生／新加坡國際藝術節藝術總監</b></p>
+            <p><b>主持/對談│鴻鴻／詩人、劇場及電影導演</b></p>
+            <p>新加坡揚名國際的劇場導演Ong Keng Sen王景生，他的創作橫跨全球各地，並曾受邀為柏林穿越藝術節策展，對於亞洲多元美學的發展多所貢獻。2014-2017年擔任新加坡國際藝術節藝術總監，更突破既有藝術節模式，帶領新加坡觀眾開創當代藝術的創新視野！王景生將分享自身執導跨文化劇場的經驗和反思、於柏林及新加坡推動藝術節的經驗、亞洲文化與西方劇場的交融產生什麼樣的火花？以及東西方傳統經典的當代意義？由鴻鴻導演銳敏提問，雙導交鋒對談精彩可期！</p>
+
+<p>◎現場英文逐步口譯。</p>
+<p>◎本活動免費參加，請先線上報名 <a target="_blank" href="http://www.taishinart.org.tw/chinese/9_registration/02_detail.php?pid=184">立即報名</a></p>
+
+
      </div>
     </div>
       <div class="to-top pull-right">  <!-- condition: repeat/item/end -->
@@ -482,7 +490,7 @@ Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講�
     </div>
     <div class="col-md-12">
         <br>
-        <p class="title">4/20【為您所看好的作品，投下支持的一票】</p>
+        <p class="title">4/20【為心中所屬，投下鼓舞的一票！】</p>
     </div>
 <!--
     <div class="col-md-12">

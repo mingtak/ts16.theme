@@ -9,3 +9,19 @@
         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
         url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
 }
+
+@font-face {
+   font-family: '28DayFont';
+   font-style: normal;
+   font-weight: 400;
+   src: url(./28day.ttf) format('truetype');
+}
+
+/*
+@font-face {
+   font-family: 'GreatFont';
+   font-style: normal;
+   font-weight: 400;
+   src: url(./GreatVibes-Regular.ttf) format('truetype');
+}
+*/
