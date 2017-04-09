@@ -23,6 +23,7 @@ all_brain = api.content.find(context=portal['contents'], Type='Page', sort_on='i
 ?>
 
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-rwd"/>
+<metal:macro use-macro="context/@@ts15_macro/macros/ts_header-rwd"/>
 <metal:macro use-macro="context/@@ts15_macro/macros/ts_header"/>
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row2"/>
 <metal:macro tal:define="items python:news_brain[:3]" use-macro="context/@@ts15_macro/macros/ts-row3"/>

@@ -23,8 +23,9 @@ for i in range(10):
 ?>
 
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-rwd-doc"/>
+<metal:macro use-macro="context/@@ts15_macro/macros/ts_header-rwd"/>
 <!--<metal:macro use-macro="context/@@ts15_macro/macros/ts_header"/> -->
-<metal:macro use-macro="context/@@ts15_macro/macros/ts-row2"/>
+<!-- <metal:macro use-macro="context/@@ts15_macro/macros/ts-row2"/> -->
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-doc"/>
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row4-1"/>
 
@@ -86,6 +87,9 @@ $(document).ready(function(){
     }
   });
 </script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58ea088670e7405f"></script>
 
 
 </metal:content-core>

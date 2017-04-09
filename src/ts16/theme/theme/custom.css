@@ -17,6 +17,9 @@ hr {
 
 /* 主視覺 */
 .ts-header .container .row div { text-align:center; padding:initial }
+#ts-header-bn-rwd { display:none }
+.template-document_view #ts-header-bn-rwd { display:initial }
+.template-document_view #ts-header-bn-rwd img { width:100% }
 
 /* title row */
 #ts-row2 .row div { height:121px}
@@ -31,12 +34,14 @@ hr {
 #ts-row4-rwd-sticky-wrapper {display:none}
 #ts-row4 .row {padding-right:25px}
 #ts-row4 li { list-style-type:none}
+#ts-row4 li.pull-right img {width:24px; margin:32px 15px 0 0}
 
 /* 主選單RWD */
 #ts-row4-rwd { display:none;}
 #ts-row4-rwd nav { display: none}
 #ts-row4-rwd .navswitch {margin:10px 5px 35px 0}
 #ts-row4-rwd nav { z-index:100000}
+#ts-row4-rwd li.pull-left img {width:32px}
 
 /* 最新消息 */
 #ts-row5 .container {baackground:#fff; background-image:url("images/15th-TSAA_index_24.jpg")}
@@ -47,16 +52,16 @@ hr {
 /* 入圍作品 */
 #ts-row6 .bg-img {text-align:left}
 #ts-row6 .container .row div {padding:0}
-#ts-row6 ul { padding-left: 50px}
+#ts-row6 ul { padding-left: 12px}
 #ts-row6 ul li {
     list-style-type:none; float:left;
     font-size:16px;
     border:solid 1px #ddd; border-radius:10px;
-    margin-right:10px;
+    margin-right:5px;
 }
 #ts-row6 ul li:hover {background-color:#eee}
 #ts-row6 ul li.active {background-color:#ffe21c}
-#ts-row6 ul li a {display:block; margin:3px 15px; border:initial; letter-spacing:4px}
+#ts-row6 ul li a {display:block; margin:3px 5px; border:initial; letter-spacing:3px}
 #ts-row6 ul li.active a {background-color:initial; width:100%}
 #ts-row6 .tab-content .row {margin:initial}
 #ts-row6 .tab-content .row div {padding:10px 18px;}
@@ -112,7 +117,7 @@ hr {
 /* 右下fixed */
 div.fixed {
     position: fixed;
-    bottom: 0;
+    bottom: 50px;
     right: 0;
 }
 div.fixed img { width: 70% }
@@ -122,16 +127,18 @@ div.fixed img { width: 70% }
 /* 內容頁 */
 #parent-fieldname-text img{max-width:100%}
 
-/* bxslider */
-
+/* table */
+table {width:100% !important}
 
 @media(max-width: 767px) {
 
 /* 暫時 */
-#ts-headerq, #ts-row3 { display:none }
+#ts-row3 { display:none }
 
 .ts-row .container{ width:100% }
 #ts-header-bn, #ts-row4, #ts-row4-1, #ts-row2{display: none}
+#ts-header-bn-rwd { display:initial }
+#ts-header-bn-rwd img {width:100%}
 #ts-row7 #ts-row7-totop img {width:241px; float:right}
 #ts-row9 .row div img { width: 315px; float:right}
 #ts-row12 .title { font-size:14px}
@@ -140,6 +147,6 @@ div.fixed img { width: 70% }
 #ts-row4-rwd-sticky-wrapper{display:block;}
 #ts-row4-rwd nav ul { padding: 30px 5px }
 #ts-row4-rwd nav ul li { list-style-type:none; font-size:18px; margin:10px}
-div.fixed img { width: 40% }
+div.fixed img { width: 50% }
 
 }

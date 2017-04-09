@@ -38,6 +38,18 @@
 </metal:row>
 
 
+<!-- Header RWD -->
+<metal:row define-macro="ts-header-rwd">
+  <section class="ts-header ts-row" id="ts-header-rwd">
+    <div class="container">
+      <div class="row">
+        <div id="ts-header-bn-rwd" class="col-md-12"><a href="${portal/absolute_url}"><img src="${prefix}images/ts_banner_w.png"></a></div>
+      </div>
+    </div>
+  </section>
+</metal:row>
+
+
 <!-- Row2 -->
 <metal:row define-macro="ts-row2">
 <section class="ts-header ts-row" id="ts-row2">
@@ -83,8 +95,10 @@
         <li class="pull-left"><a href="#ts-row10"><img src="${prefix}images/15th-TSAA_index_14.jpg" /></a></li>
         <li class="pull-left"><a href="#ts-row11"><img src="${prefix}images/15th-TSAA_index_15.jpg" /></a></li>
         <li class="pull-left"><a href="#ts-row12"><img src="${prefix}images/15th-TSAA_index_16.jpg" /></a></li>
-        <li class="pull-right"><a href="#"><img src="${prefix}images/15th-TSAA_index_17.jpg" /></a></li>
-        <li class="pull-right"><a href="#"><img src="${prefix}images/15th-TSAA_index_18.jpg" /></a></li>
+<!--
+        <li class="pull-right"><a href="#"><img src="${prefix}images/linelogo.png" /></a></li>
+        <li class="pull-right"><a href="#"><img src="${prefix}images/fblogo.png" /></a></li>
+-->
       </ul>
     </div>
   </div>
@@ -107,8 +121,9 @@
         <li><a href="#ts-row10"><i class="fa fa-angle-double-right"></i> 國際決審會客室</a></li>
         <li><a href="#ts-row11"><i class="fa fa-angle-double-right"></i> 關於台新藝術獎</a></li>
         <li><a href="#ts-row12"><i class="fa fa-angle-double-right"></i> 我心目中的得主</a></li>
-        <li class="pull-left"><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-        <li class="pull-left"><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+<!--        <li class="pull-left"><a href="#"><img src="${prefix}images/fblogo.png" /></a></li>
+        <li class="pull-left"><a href="#"><img src="${prefix}images/linelogo.png" /></a></li>
+-->
       </ul>
 </nav>
     </div>
@@ -136,8 +151,6 @@
         <li class="pull-left"><a href="${portal/absolute_url}#ts-row10"><img src="${prefix}images/15th-TSAA_index_14.jpg" /></a></li>
         <li class="pull-left"><a href="${portal/absolute_url}#ts-row11"><img src="${prefix}images/15th-TSAA_index_15.jpg" /></a></li>
         <li class="pull-left"><a href="${portal/absolute_url}#ts-row12"><img src="${prefix}images/15th-TSAA_index_16.jpg" /></a></li>
-        <li class="pull-right"><a href="#"><img src="${prefix}images/15th-TSAA_index_17.jpg" /></a></li>
-        <li class="pull-right"><a href="#"><img src="${prefix}images/15th-TSAA_index_18.jpg" /></a></li>
       </ul>
     </div>
   </div>
@@ -160,8 +173,6 @@
         <li><a href="${portal/absolute_url}#ts-row10"><i class="fa fa-angle-double-right"></i> 國際決審會客室</a></li>
         <li><a href="${portal/absolute_url}#ts-row11"><i class="fa fa-angle-double-right"></i> 關於台新藝術獎</a></li>
         <li><a href="${portal/absolute_url}#ts-row12"><i class="fa fa-angle-double-right"></i> 我心目中的得主</a></li>
-        <li class="pull-left"><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
-        <li class="pull-left"><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
       </ul>
 </nav>
     </div>
@@ -545,12 +556,15 @@ Kasahara Michiko (笠原美智子) 所舉辦有關她們的 策展故事的講�
   <div class="row bg-w">
     <div class="col-md-6 col-xs-12">
       <div class="footer-img">
-          <a href="http://talks.taishinart.org.tw/" target="_blank">
-              <img src="${prefix}images/15th-TSAA_index_95.jpg">
-          </a>
-          <a href="http://artsawardarchive.taishinart.org.tw/" target="_blank">
-              <img src="${prefix}images/15th-TSAA_index_96.jpg">
-          </a>
+              <a href="http://talks.taishinart.org.tw/" target="_blank">
+                  <img src="${prefix}images/15th-TSAA_index_95.jpg" style="width:30%">
+              </a>
+              <a href="http://artsawardarchive.taishinart.org.tw/" target="_blank">
+                  <img src="${prefix}images/15th-TSAA_index_96.jpg" style="width:10%">
+              </a>
+              <a href="http://www.taishinart.org.tw/" target="_blank">
+                  <img src="${prefix}images/taishin_logo.png" style="width:57%">
+              </a>
       </div>
       <div class="copyright">
           <p>版權所有©台新銀行文化藝術基金會</p>
