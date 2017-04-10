@@ -16,7 +16,7 @@
 from plone import api
 portal = api.portal.get()
 prefix = '%s/++theme++taishin-16th/' % portal.absolute_url()
-news_brain = api.content.find(context=portal['news'], Type='Page', sort_on='modified', sort_order='reverse', sort_limit=10)[:10]
+news_brain = api.content.find(context=portal['news'], Type=['Page', 'Link'], review_state='published', sort_on='modified', sort_order='reverse', sort_limit=10)[:10]
 show_brain = api.content.find(context=portal['contents'], Subject='表演藝術', Type='Page', sort_on='id')
 visual_brain = api.content.find(context=portal['contents'], Subject='視覺藝術', Type='Page', sort_on='id')
 all_brain = api.content.find(context=portal['contents'], Type='Page', sort_on='id')
@@ -39,6 +39,12 @@ all_brain = api.content.find(context=portal['contents'], Type='Page', sort_on='i
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row11"/>
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row12"/>
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row13"/>
+
+<div class="fixed">
+    <a href="${portal/absolute_url}#ts-row12">
+        <img class="pull-right" src="${prefix}images/vote_btn.png"/>
+    </a>
+</div>
 
 
 
@@ -66,6 +72,15 @@ $(document).ready(function(){
         });
     }
   });
+</script>
+
+<script>
+// lock mouse right bottom
+$(document).ready(function() {
+    $(document).get(0).oncontextmenu = function() {
+        return false;
+    };
+});
 </script>
 
 </metal:content-core>
