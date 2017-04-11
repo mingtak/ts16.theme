@@ -86,6 +86,9 @@ hr {
 #ts-row10 .row.odd {background-image:url("images/15th-TSAA_index_72.jpg"); padding:25px 0}
 #ts-row10 .row.even {background-image:url("images/15th-TSAA_index_73.jpg"); padding:25px 0}
 #ts-row10 .info { margin: 0 30px ;padding-top:0}
+#ts-row10 table { margin: 20px 0}
+#ts-row10 table td { margin: 5px 0}
+
 
 /* 關於台新藝術獎 */
 #ts-row11 .row {padding-top:20px}

@@ -102,6 +102,7 @@
   <div class="row bg-y2">
     <div class="col-md-12">
       <ul>
+        <li class="pull-left"><a href="${portal/absolute_url}"><img src="${portal/absolute_url}/images/menu_home.png" /></a></li>
         <li class="pull-left"><a href="#ts-row5"><img src="${prefix}images/15th-TSAA_index_11.jpg" /></a></li>
         <li class="pull-left"><a href="#ts-row6"><img src="${prefix}images/15th-TSAA_index_12.jpg" /></a></li>
         <li class="pull-left"><a href="#ts-row8"><img src="${prefix}images/15th-TSAA_index_13.jpg" /></a></li>
@@ -128,6 +129,7 @@
     <div class="col-md-12">
 <nav>
       <ul>
+        <li><a href="${portal/absolute_url}"><i class="fa fa-angle-double-right"></i> 回首頁</a></li>
         <li><a href="#ts-row5"><i class="fa fa-angle-double-right"></i> 最新消息</a></li>
         <li><a href="#ts-row6"><i class="fa fa-angle-double-right"></i> 入圍作品</a></li>
         <li><a href="#ts-row8"><i class="fa fa-angle-double-right"></i> 文件展</a></li>
@@ -158,6 +160,7 @@
   <div class="row bg-y2">
     <div class="col-md-12">
       <ul>
+        <li class="pull-left"><a href="${portal/absolute_url}"><img src="${portal/absolute_url}/images/menu_home.png" /></a></li>
         <li class="pull-left"><a href="${portal/absolute_url}#ts-row5"><img src="${prefix}images/15th-TSAA_index_11.jpg" /></a></li>
         <li class="pull-left"><a href="${portal/absolute_url}#ts-row6"><img src="${prefix}images/15th-TSAA_index_12.jpg" /></a></li>
         <li class="pull-left"><a href="${portal/absolute_url}#ts-row8"><img src="${prefix}images/15th-TSAA_index_13.jpg" /></a></li>
@@ -180,6 +183,7 @@
     <div class="col-md-12">
 <nav>
       <ul>
+        <li><a href="${portal/absolute_url}"><i class="fa fa-angle-double-right"></i> 回首頁</a></li>
         <li><a href="${portal/absolute_url}#ts-row5"><i class="fa fa-angle-double-right"></i> 最新消息</a></li>
         <li><a href="${portal/absolute_url}#ts-row6"><i class="fa fa-angle-double-right"></i> 入圍作品</a></li>
         <li><a href="${portal/absolute_url}#ts-row8"><i class="fa fa-angle-double-right"></i> 文件展</a></li>
@@ -341,7 +345,23 @@
         </p>
     </div>
     <div class="col-md-5 show-img">
-        <img src="${prefix}images/15th-TSAA_index_67.jpg">
+
+    <div id="bxslider">
+        <ul class="bxslider">
+            <li>
+                <div style="max-width:100%; overflow:hidden">
+        <img src="${portal/absolute_url}/images/01.jpg">
+                </div>
+            </li>
+            <li>
+                <div style="max-width:100%; overflow:hidden">
+        <img src="${portal/absolute_url}/images/02.jpg">
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
     </div>
   </div>
 </div>
@@ -386,12 +406,43 @@
         <div class="info"><br><br>
             <h4>國際決審會客室(一)</h4>
             <h3>這裡，我們跨界交鋒！</h3>
-            <p><b>時間│5.13(六) 19:00-21:00</b></p>
-            <p><b>地點│台新金控大樓元廳 (台北市仁愛路四段118號2樓)</b></p>
-            <p><b>主講│Martin Sturm馬丁．史圖 ／奧地利林茲OK當代藝術中心總監
-                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       Jeff Khan傑夫．可汗／ 澳洲雪梨Performance Space藝術總監</b></p>
-            <p><b>主持│徐文瑞 /獨立策展人、藝評家</b></p>
+<table style="width:100%">
+  <tr>
+    <td style="white-space:nowrap;width:5%">
+<b>時間│</b>
+    </td>
+    <td style="float:left">
+<b>5.13(六) 19:00-21:00</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="white-space:nowrap;width:5%">
+<b>地點│</b>
+    </td>
+    <td style="float:left">
+<b>台新金控大樓元廳 (台北市仁愛路四段118號2樓)</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="white-space:nowrap;width:5%">
+<b>主講│</b>
+    </td>
+    <td style="float:left">
+<b>Martin Sturm馬丁．史圖 ／奧地利林茲OK當代藝術中心總監<br>Jeff Khan傑夫．可汗／ 澳洲雪梨Performance Space藝術總監</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="white-space:nowrap;width:5%">
+<b>主持│</b>
+    </td>
+    <td style="float:left">
+<b>徐文瑞 /獨立策展人、藝評家</b>
+    </td>
+  </tr>
+</table>
             <p>Martin Sturm （馬丁．史圖）擔任林茲OK當代藝術中心總監長達25年，挖掘並開創大量實驗性的藝術策展，如「天空之城」，是林茲2009年「歐洲文化首都年」最大規模策展，至今影響深遠。Performance Space藝術總監Jeff Khan（傑夫・可汗）將1880年代的火車機房搖身變成多元且當代的表演藝術與策展空間，並開發各種場域的當代藝術可能性，與在地社群建立互動。兩位分別來自視覺藝術和表演藝術領域，都是致力於挖掘新的跨界創作與實踐，這裡有什麼新興的美學課題值得討論?在藝術的展演空間上有何什麼新的媒合、交集或衝撞？</p>
 
 <p>◎現場英文逐步口譯。</p>
@@ -406,10 +457,46 @@
      <div class="info">
             <h4>國際決審會客室（二） </h4>
             <h3>劇場的跨文化旅程</h3>
-            <p><b>時間│5.14(日) 14:00-16:00</b></p>
-            <p><b>地點│台新金控大樓元廳 (台北市仁愛路四段118號2樓)</b></p>
-            <p><b>主講│Ong Keng Sen王景生／新加坡國際藝術節藝術總監</b></p>
-            <p><b>主持/對談│鴻鴻／詩人、劇場及電影導演</b></p>
+
+<table style="width:100%">
+  <tr>
+    <td style="white-space:nowrap;width:5%">
+<b>時間│</b>
+    </td>
+    <td style="float:left">
+<b>5.14(日) 14:00-16:00</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="white-space:nowrap;width:5%">
+<b>地點│</b>
+    </td>
+    <td style="float:left">
+<b>台新金控大樓元廳 (台北市仁愛路四段118號2樓)</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="white-space:nowrap;width:5%">
+<b>主講│</b>
+    </td>
+    <td style="float:left">
+<b>Ong Keng Sen王景生／新加坡國際藝術節藝術總監</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="white-space:nowrap;width:5%">
+<b>主持│</b>
+    </td>
+    <td style="float:left">
+<b>鴻鴻／詩人、劇場及電影導演</b>
+    </td>
+  </tr>
+</table>
+
+
             <p>新加坡揚名國際的劇場導演Ong Keng Sen王景生，他的創作橫跨全球各地，並曾受邀為柏林穿越藝術節策展，對於亞洲多元美學的發展多所貢獻。2014-2017年擔任新加坡國際藝術節藝術總監，更突破既有藝術節模式，帶領新加坡觀眾開創當代藝術的創新視野！王景生將分享自身執導跨文化劇場的經驗和反思、於柏林及新加坡推動藝術節的經驗、亞洲文化與西方劇場的交融產生什麼樣的火花？以及東西方傳統經典的當代意義？由鴻鴻導演銳敏提問，雙導交鋒對談精彩可期！</p>
 
 <p>◎現場英文逐步口譯。</p>
@@ -472,7 +559,7 @@
                 <li>表演藝術獎：一名，頒發獎金新台幣一百萬元整及獎座</li>
                 <li>視覺藝術獎：一名，頒發獎金新台幣一百萬元整及獎座</li>
             </ol>
-            <a href="#" class="TSAAlink01">第十五屆台新藝術獎決審委員</a><br>
+            <a href="http://talks.taishinart.org.tw/award/2016/committee/final" target="_blank" class="TSAAlink01">第十五屆台新藝術獎決審委員</a><br>
             <a href="http://talks.taishinart.org.tw/juries/index_html" target="_blank" class="TSAAlink01">第十五屆台新藝術獎提名觀察人</a>
         </div>
         <div class="bottom-img">

@@ -83,6 +83,16 @@ $(document).ready(function() {
 });
 </script>
 
+<script>
+$('.bxslider').bxSlider({
+  auto: true,
+  pager: false,
+  adaptiveHeight: true,
+  autoControls: true,
+});
+</script>
+
+
 </metal:content-core>
 </metal:content-core>
 
