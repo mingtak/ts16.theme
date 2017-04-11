@@ -28,7 +28,8 @@
     <div class="container">
       <div class="row">
         <div id="ts-header-yt" class="col-md-7 col-sm-12 ts-header-left" valign="top" style="height:344px;background-image:url(${prefix}images/15th-TSAA_index_02.jpg)">
-<iframe width="100%" height="320" src="https://www.youtube.com/embed/KLmnHyOmvEw?autoplay=1" frameborder="0" allowfullscreen style="padding-top:30px"></iframe>
+            <iframe width="100%" height="320" src="https://www.youtube.com/embed/KLmnHyOmvEw?autoplay=1&rel=0"
+                    frameborder="0" allowfullscreen style="padding-top:30px"></iframe>
 
         </div>
         <div id="ts-header-bn" class="col-md-5"><img src="${prefix}images/15th-TSAA_index_03.jpg"></div>
@@ -103,16 +104,12 @@
     <div class="col-md-12">
       <ul>
         <li class="pull-left"><a href="${portal/absolute_url}"><img src="${portal/absolute_url}/images/menu_home.png" /></a></li>
-        <li class="pull-left"><a href="#ts-row5"><img src="${prefix}images/15th-TSAA_index_11.jpg" /></a></li>
-        <li class="pull-left"><a href="#ts-row6"><img src="${prefix}images/15th-TSAA_index_12.jpg" /></a></li>
-        <li class="pull-left"><a href="#ts-row8"><img src="${prefix}images/15th-TSAA_index_13.jpg" /></a></li>
-        <li class="pull-left"><a href="#ts-row10"><img src="${prefix}images/15th-TSAA_index_14.jpg" /></a></li>
-        <li class="pull-left"><a href="#ts-row11"><img src="${prefix}images/15th-TSAA_index_15.jpg" /></a></li>
-        <li class="pull-left"><a href="#ts-row12"><img src="${prefix}images/15th-TSAA_index_16.jpg" /></a></li>
-<!--
-        <li class="pull-right"><a href="#"><img src="${prefix}images/linelogo.png" /></a></li>
-        <li class="pull-right"><a href="#"><img src="${prefix}images/fblogo.png" /></a></li>
--->
+        <li class="pull-left"><a href="#ts_countdown"><img src="${prefix}images/15th-TSAA_index_11.jpg" /></a></li>
+        <li class="pull-left"><a href="#ts_index_2"><img src="${prefix}images/15th-TSAA_index_12.jpg" /></a></li>
+        <li class="pull-left"><a href="#ts-row7-totop"><img src="${prefix}images/15th-TSAA_index_13.jpg" /></a></li>
+        <li class="pull-left"><a href="#ts-row9"><img src="${prefix}images/15th-TSAA_index_14.jpg" /></a></li>
+        <li class="pull-left"><a href="#ts_index_3"><img src="${prefix}images/15th-TSAA_index_15.jpg" /></a></li>
+        <li class="pull-left"><a href="#ts_index_4"><img src="${prefix}images/15th-TSAA_index_16.jpg" /></a></li>
       </ul>
     </div>
   </div>
@@ -136,9 +133,6 @@
         <li><a href="#ts-row10"><i class="fa fa-angle-double-right"></i> 國際決審會客室</a></li>
         <li><a href="#ts-row11"><i class="fa fa-angle-double-right"></i> 關於台新藝術獎</a></li>
         <li><a href="#ts-row12"><i class="fa fa-angle-double-right"></i> 我心目中的得主</a></li>
-<!--        <li class="pull-left"><a href="#"><img src="${prefix}images/fblogo.png" /></a></li>
-        <li class="pull-left"><a href="#"><img src="${prefix}images/linelogo.png" /></a></li>
--->
       </ul>
 </nav>
     </div>
@@ -161,12 +155,12 @@
     <div class="col-md-12">
       <ul>
         <li class="pull-left"><a href="${portal/absolute_url}"><img src="${portal/absolute_url}/images/menu_home.png" /></a></li>
-        <li class="pull-left"><a href="${portal/absolute_url}#ts-row5"><img src="${prefix}images/15th-TSAA_index_11.jpg" /></a></li>
-        <li class="pull-left"><a href="${portal/absolute_url}#ts-row6"><img src="${prefix}images/15th-TSAA_index_12.jpg" /></a></li>
-        <li class="pull-left"><a href="${portal/absolute_url}#ts-row8"><img src="${prefix}images/15th-TSAA_index_13.jpg" /></a></li>
-        <li class="pull-left"><a href="${portal/absolute_url}#ts-row10"><img src="${prefix}images/15th-TSAA_index_14.jpg" /></a></li>
-        <li class="pull-left"><a href="${portal/absolute_url}#ts-row11"><img src="${prefix}images/15th-TSAA_index_15.jpg" /></a></li>
-        <li class="pull-left"><a href="${portal/absolute_url}#ts-row12"><img src="${prefix}images/15th-TSAA_index_16.jpg" /></a></li>
+        <li class="pull-left"><a href="${portal/absolute_url}#ts_countdown"><img src="${prefix}images/15th-TSAA_index_11.jpg" /></a></li>
+        <li class="pull-left"><a href="${portal/absolute_url}#ts_index_2"><img src="${prefix}images/15th-TSAA_index_12.jpg" /></a></li>
+        <li class="pull-left"><a href="${portal/absolute_url}#ts-row7-totop"><img src="${prefix}images/15th-TSAA_index_13.jpg" /></a></li>
+        <li class="pull-left"><a href="${portal/absolute_url}#ts-row9"><img src="${prefix}images/15th-TSAA_index_14.jpg" /></a></li>
+        <li class="pull-left"><a href="${portal/absolute_url}#ts_index_3"><img src="${prefix}images/15th-TSAA_index_15.jpg" /></a></li>
+        <li class="pull-left"><a href="${portal/absolute_url}#ts_index_4"><img src="${prefix}images/15th-TSAA_index_16.jpg" /></a></li>
       </ul>
     </div>
   </div>
@@ -234,7 +228,7 @@
       <p class="TSAAindextitle01"><u><a href="${item/getURL}">${item/Title}</a></u></p>
     <p class="TSAAindextext">${item/Description}</p>
     <hr tal:condition="not:repeat/item/end">
-    <a href="/" tal:condition="repeat/item/end">
+    <a href="/" tal:condition="repeat/item/end" id="ts_index_2">
         <img class="read-more" src="${prefix}images/15th-TSAA_index_25.jpg"/>
     </a>
 
@@ -398,7 +392,7 @@
     </div>
     <div class="col-md-12">
         <div class="info">
-            「國際決審會客室」是台新銀行文化藝術基金會特別為今年台新藝術獎國際決選委員 Ｍartin Sturm (馬丁．史圖)、Jeff Khan(傑夫．可汗) 、以及Ong Keng Sen (王景生)所舉辦的講座。三位來自歐、澳、亞，皆是國際當代藝術場館與藝術節重要推手，將分別與台灣知名策展人徐文瑞，以及詩人導演鴻鴻對談，激盪最尖端的策展經驗與思維！
+            「國際決審會客室」是台新銀行文化藝術基金會特別為今年台新藝術獎國際決選委員 Ｍartin Sturm (馬丁．史圖)、Jeff Khan(傑夫．可汗) 以及Ong Keng Sen (王景生)所舉辦的講座。三位來自歐、澳、亞，皆是國際當代藝術場館與藝術節重要推手，將分別與台灣知名策展人徐文瑞，以及詩人導演鴻鴻對談，激盪最尖端的策展經驗與思維！
         </div>
     </div>
 
@@ -505,7 +499,7 @@
 
      </div>
     </div>
-      <div class="to-top pull-right">  <!-- condition: repeat/item/end -->
+      <div class="to-top pull-right" id="ts_index_3">  <!-- condition: repeat/item/end -->
           <a href="#"><img src="${prefix}images/15th-TSAA_index_78.jpg"></a>
       </div>
   </div>
@@ -543,8 +537,9 @@
 投入，使一個藝術桂冠的打造，能兼及文化環境的改善，及縮短藝
 術與民眾的距離，讓創意的活動與美感的事物自發地融入生活。
 
-<p>台新藝術獎第十五屆 評選辦法
-<a href="${portal/absolute_url}/files/ts15.pdf" target="_blank">下載</a></p>
+<br><br>
+<p><b>台新藝術獎第十五屆 評選辦法
+<a href="${portal/absolute_url}/files/ts15.pdf" target="_blank">下載</a></b></p>
 
         </div>
     </div>
@@ -560,13 +555,13 @@
                 <li>視覺藝術獎：一名，頒發獎金新台幣一百萬元整及獎座</li>
             </ol>
             <a href="http://talks.taishinart.org.tw/award/2016/committee/final" target="_blank" class="TSAAlink01">第十五屆台新藝術獎決審委員</a><br>
-            <a href="http://talks.taishinart.org.tw/juries/index_html" target="_blank" class="TSAAlink01">第十五屆台新藝術獎提名觀察人</a>
+            <a href="http://talks.taishinart.org.tw/juries/2016" target="_blank" class="TSAAlink01">第十五屆台新藝術獎提名觀察人</a>
         </div>
         <div class="bottom-img">
             <img src="${prefix}images/15th-TSAA_index_83.jpg">
         </div>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12" id="ts_index_4">
         <a href="#"><img class="pull-right" src="${prefix}images/15th-TSAA_index_91.png"/></a>
     </div>      
   </div>
@@ -661,30 +656,25 @@
   <div class="row bg-w">
     <div class="col-md-6 col-xs-12">
       <div class="footer-img">
+              <a href="http://www.taishinart.org.tw/" target="_blank">
+                  <img src="${prefix}images/taishin_logo.png" style="width:57%">
+              </a>
               <a href="http://talks.taishinart.org.tw/" target="_blank">
                   <img src="${prefix}images/15th-TSAA_index_95.jpg" style="width:30%">
               </a>
               <a href="http://artsawardarchive.taishinart.org.tw/" target="_blank">
                   <img src="${prefix}images/15th-TSAA_index_96.jpg" style="width:10%">
               </a>
-              <a href="http://www.taishinart.org.tw/" target="_blank">
-                  <img src="${prefix}images/taishin_logo.png" style="width:57%">
-              </a>
       </div>
       <div class="copyright">
           <p>版權所有©台新銀行文化藝術基金會</p>
-          <p>地址：台北市仁愛路四段118號15樓&nbsp;&nbsp;&nbsp;電話： 02-3707-6955</p>
+          <p>地址：台北市仁愛路四段118號15樓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;電話： 02-3707-6955</p>
+          <p>聯絡我們：<a href="mailto:info@taishinart.org.tw">info@taishinart.org.tw</a></p>
       </div>
     </div>
     <div class="col-md-6 col-xs-12">
       <div class="sponser">
-<img src="${portal/absolute_url}/images/footer_right.png/@@images/image/large" style="width:100%"/>
-<!--          <img src="${prefix}images/15th-TSAA_index_99.jpg"/>
-          <a href="https://www.taishinbank.com.tw" target="_blank">
-              <img src="${prefix}images/15th-TSAA_index_102.jpg"/>
-          </a>
-          <img src="${prefix}images/15th-TSAA_index_103.jpg"/>
--->
+          <img src="${portal/absolute_url}/images/footer_right.png/@@images/image/large" style="width:100%"/>
       </div>
     </div>
   </div>
