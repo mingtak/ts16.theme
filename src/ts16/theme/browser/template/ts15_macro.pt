@@ -73,8 +73,10 @@
       <ul>
         <li tal:repeat="item items">
 <tal:type switch="item/Type">
-          <a tal:case="string:Page" href="${item/getURL}">${python:item.created.strftime('%m.%d')} ${python:item.Title[:60]}${python:'...' if len(item.Title)>60 else ''}</a>
-          <a tal:case="string:Link" target="_blank" href="${item/getURL}">${python:item.created.strftime('%m.%d')} ${python:item.Title[:60]}${python:'...' if len(item.Title)>60 else ''}</a>
+          <a tal:case="string:Page" title="${item/Title}"
+             href="${item/getURL}">${python:item.created.strftime('%m.%d')}&nbsp;&nbsp;&nbsp;${python:item.Title[:72]}${python:'...' if len(item.Title)>72 else ''}</a>
+          <a tal:case="string:Link" title="${item/Title}"
+             target="_blank" href="${item/getURL}">${python:item.created.strftime('%m.%d')}&nbsp;&nbsp;&nbsp;${python:item.Title[:72]}${python:'...' if len(item.Title)>72 else ''}</a>
 </tal:type>
         </li>
       </ul>
@@ -265,7 +267,7 @@
     <div class="row" tal:repeat="row python:range(int(math.ceil(len(all_brain)/4.0)))">
         <div class="col-md-3 col-sm-6 col-xs-12" tal:repeat="item python:all_brain[row*4:(row*4)+4]">
             <h4 class="TSAAindextitle01"><a href="${item/getURL}">${item/Title}</a></h4>
-            <p class="TSAAindex02">${item/Description}</p>
+<!--            <p class="TSAAindex02">${item/Description}</p> -->
             <a href="${item/getURL}"><img src="${item/getURL}/@@images/image/preview"/></a>
         </div>
     </div>
@@ -275,7 +277,7 @@
     <div class="row" tal:repeat="row python:range(int(math.ceil(len(show_brain)/3.0)))">
         <div class="col-md-4" tal:repeat="item python:show_brain[row*3:(row*3)+3]">
             <h4 class="TSAAindextitle01"><a href="${item/getURL}">${item/Title}</a></h4>
-            <p class="TSAAindex02">${item/Description}</p>
+<!--            <p class="TSAAindex02">${item/Description}</p> -->
             <a href="${item/getURL}"><img src="${item/getURL}/@@images/image/preview"/></a>
         </div>
     </div>
@@ -285,7 +287,7 @@
     <div class="row" tal:repeat="row python:range(int(math.ceil(len(visual_brain)/3.0)))">
         <div class="col-md-4" tal:repeat="item python:visual_brain[row*3:(row*3)+3]">
             <h4 class="TSAAindextitle01"><a href="${item/getURL}">${item/Title}</a></h4>
-            <p class="TSAAindex02">${item/Description}</p>
+<!--            <p class="TSAAindex02">${item/Description}</p> -->
             <a href="${item/getURL}"><img src="${item/getURL}/@@images/image/preview"/></a>
         </div>
     </div>
@@ -424,7 +426,7 @@
 <b>主講│</b>
     </td>
     <td style="float:left">
-<b>Martin Sturm馬丁．史圖 ／奧地利林茲OK當代藝術中心總監<br>Jeff Khan傑夫．可汗／ 澳洲雪梨Performance Space藝術總監</b>
+<b>Martin Sturm馬丁．史圖 ／奧地利林茲OK當代藝術中心館長<br>Jeff Khan傑夫．可汗／ 澳洲雪梨Performance Space藝術總監</b>
     </td>
   </tr>
 
@@ -437,7 +439,7 @@
     </td>
   </tr>
 </table>
-            <p>Martin Sturm （馬丁．史圖）擔任林茲OK當代藝術中心總監長達25年，挖掘並開創大量實驗性的藝術策展，如「天空之城」，是林茲2009年「歐洲文化首都年」最大規模策展，至今影響深遠。Performance Space藝術總監Jeff Khan（傑夫・可汗）將1880年代的火車機房搖身變成多元且當代的表演藝術與策展空間，並開發各種場域的當代藝術可能性，與在地社群建立互動。兩位分別來自視覺藝術和表演藝術領域，都是致力於挖掘新的跨界創作與實踐，這裡有什麼新興的美學課題值得討論?在藝術的展演空間上有何什麼新的媒合、交集或衝撞？</p>
+            <p>Martin Sturm （馬丁．史圖）擔任林茲OK當代藝術中心館長長達25年，挖掘並開創大量實驗性的藝術策展，如「天空之城」，是林茲2009年「歐洲文化首都年」最大規模策展，至今影響深遠。Performance Space藝術總監Jeff Khan（傑夫・可汗）將1880年代的火車機房搖身變成多元且當代的表演藝術與策展空間，並開發各種場域的當代藝術可能性，與在地社群建立互動。兩位分別來自視覺藝術和表演藝術領域，都是致力於挖掘新的跨界創作與實踐，這裡有什麼新興的美學課題值得討論?在藝術的展演空間上有何什麼新的媒合、交集或衝撞？</p>
 
 <p>◎現場英文逐步口譯。</p>
 <p>◎本活動免費參加，請先線上報名 <a target="_blank" href="http://www.taishinart.org.tw/chinese/9_registration/02_detail.php?pid=183">立即報名</a></p>
@@ -582,16 +584,17 @@
     </div>
     <div class="col-md-12">
         <br>
-        <p class="title">4/20起，【為心中所屬，投下鼓舞的一票！】</p>
+        <p class="title">【我心目中的得主】</p>
+        <p class="desc">── 為心中所屬，投下鼓舞的一票！──</p>
+        <p class="desc">第15屆台新藝術獎網路活動</p>
     </div>
-<!--
     <div class="col-md-12">
         <div class="info">
-            <p>選出你心目中的得主，為藝術家及團隊在漫長的創作路上，點亮一顆星，給他們鼓勵與支持的力量。<br>每日以Facebook帳號登入，可以對19件入圍作品進行一次投票。參與投票者就有機會把好禮帶回家。</p>
-            <a href="#"><u>活動辦法</u></a>
+            <p>專家有專家的說法，我有我的摯愛！為心中所屬，投下鼓舞的一票！<br>當摯愛得獎，BINGO！他得獎金，您將有機會抽獎得好禮！<br>4/20起，投票啟動</p>
+<!--            <a href="#"><u>活動辦法</u></a> -->
         </div>
     </div>
--->
+
   </div>
 <!--
   <div class="row">

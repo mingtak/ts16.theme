@@ -101,8 +101,9 @@ hr {
 #ts-row12 .row { background-image:url("images/15th-TSAA_index_51.jpg"); padding: 20px 15px}
 #ts-row12 .award-img { max-width:100%; overflow:hidden; text-align:center}
 #ts-row12 .award-img img { width:85%; margin: 0 auto}
-#ts-row12 .title { text-align: center; font-weight: bold; font-size:20px}
-#ts-row12 .info { padding: 10px 30px; text-align:center; margin-bottom:15px }
+#ts-row12 .title { text-align: center; font-weight: bold; font-size:20px }
+#ts-row12 .desc { text-align: center; font-weight: bold; font-size:16px }
+#ts-row12 .info { padding: 10px 30px; text-align:center; margin-bottom:15px; font-size:18px; line-height:40px}
 #ts-row12 p.poll-title { font-weight: bold; font-size:18px}
 #ts-row12 p.detail { margin: 20px 0 }
 #ts-row12 p.poll { margin: 0 20px }

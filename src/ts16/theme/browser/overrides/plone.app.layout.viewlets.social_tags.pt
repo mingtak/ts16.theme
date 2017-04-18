@@ -1,0 +1,12 @@
+<!-- <meta tal:repeat="tag view/tags" tal:attributes="tag" /> -->
+
+<meta content="第十五屆台新藝術獎" property="og:site_name" />
+<meta content="${context/title}" property="og:title" />
+<meta content="website" property="og:type" />
+<meta content="${context/description}" name="twitter:description" />
+<meta content="${context/absolute_url}" name="twitter:url" />
+<meta content="${context/description}" property="og:description" />
+<meta content="${context/absolute_url}" property="og:url" />
+<meta content="/images/video-1.png" name="twitter:image" />
+<meta content="/images/video-1.png" property="og:image" />
+<meta content="image/png" property="og:image:type" />
