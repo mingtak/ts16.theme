@@ -2,6 +2,7 @@
     xmlns:tal="http://xml.zope.org/namespaces/tal"
     xmlns:metal="http://xml.zope.org/namespaces/metal"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    xmlns:v-on="http://www.vuejs.org"
     lang="en"
     metal:use-macro="context/main_template/macros/master"
     i18n:domain="ts16.content">
@@ -574,6 +575,8 @@
 
 <!-- Row12 -->
 <metal:row define-macro="ts-row12">
+<?python import math?>
+
 <section class="ts-row" id="ts-row12">
 <div class="container">
   <div class="row">
@@ -595,35 +598,26 @@
         </div>
     </div>
 
-  </div>
-<!--
-  <div class="row">
-    <div class="col-md-6">
-        <div class="award-img">
-            <img src="${prefix}images/15th-TSAA_index_104.jpg">
-        </div>
-        <div class="poll-info">
-            <p class="poll-title">《＃》創作社CS監製作品4號創作社劇團</p>
-            <p class="detail">（編劇魏于嘉、導演李銘宸）</p>
-            <p class="poll"><a href="#" class="btn btn-info">我要投票</a></p>
-            <p class="counter">累積票數：0012</p>
-            <hr>
+
+<div class="shows">
+    <div class="row" tal:repeat="row python:range(int(math.ceil(len(all_brain_for_poll)/4.0)))">
+        <div class="col-md-3 col-sm-6 col-xs-12" tal:repeat="item python:all_brain_for_poll[row*4:(row*4)+4]">
+            <h4 class="TSAAindextitle01"><a href="${item/getURL}">${item/Title}</a></h4>
+<!--            <p class="TSAAindex02">${item/Description}</p> -->
+            <a href="${item/getURL}"><img src="${item/getURL}/@@images/image/preview"/></a>
+            <a id="${item/UID}" class="btn btn-info btn-xs" href="javascript:void()" v-on:click="poll($event)">投我一票</a>
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="award-img">
-            <img src="${prefix}images/15th-TSAA_index_104.jpg">
-        </div>
-        <div class="poll-info">
-            <p class="title">《＃》創作社CS監製作品4號創作社劇團</p>
-            <p class="detail">（編劇魏于嘉、導演李銘宸）</p>
-            <p class="poll"><a href="#" class="btn btn-info">我要投票</a></p>
-            <p class="counter">累積票數：0012</p>
-            <hr>
-        </div>
+    <div style="padding:0 auto; text-align:center">
+        <a id="submitVote" class="btn btn-warning btn-lg"
+           href="javascript:void()"
+           v-on:click="submitVote($event)">送出投票</a>
     </div>
+</div>
+
+
   </div>
--->
+
 
 
   <div class="row">

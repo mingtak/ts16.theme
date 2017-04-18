@@ -110,6 +110,9 @@ hr {
 #ts-row12 p.counter { margin: 20px 20px; color:#aaa }
 #ts-row12 .poll-info { padding: 20px 20px}
 #ts-row12 .bottom { text-align: center}
+#ts-row12 .shows img { width:100%}
+#ts-row12 .shows a.btn { margin: 10px 0;}
+
 
 /* 頁腳 */
 #ts-row13 .row { padding:50px 30px 70px 50px}
