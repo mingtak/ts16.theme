@@ -225,20 +225,38 @@
         </div>
     </div>
 
-    <div class="col-md-12" tal:repeat="item items>
+    <div class="col-md-12" tal:repeat="item python:items[:5]">
+        <div class="news-content">
+            <p class="TSAAindextime">${python:item.created.strftime('%m.%d.%Y')}</p>
+            <p class="TSAAindextitle01"><u><a href="${item/getURL}">${item/Title}</a></u></p>
+            <p class="TSAAindextext">${item/Description}</p>
+            <hr>
+        </div>
+    </div>
+
+    <section id="ts-more-news" style="display:none">
+    <div class="col-md-12" tal:repeat="item items">
         <div class="news-content">
             <p class="TSAAindextime">${python:item.created.strftime('%m.%d.%Y')}</p>
             <p class="TSAAindextitle01"><u><a href="${item/getURL}">${item/Title}</a></u></p>
             <p class="TSAAindextext">${item/Description}</p>
             <hr tal:condition="not:repeat/item/end">
-            <a href="/" tal:condition="repeat/item/end" id="ts_index_2">
-                <img class="read-more" src="${prefix}images/15th-TSAA_index_25.jpg"/>
-            </a>
         </div>
     </div>
-
+    </section>
+            <a href="javascript:void(0)" tal:condition="repeat/item/end" id="ts_index_2" style="margin-left:50px">
+                <img class="read-more" src="${prefix}images/15th-TSAA_index_25.jpg"/>
+            </a>
   </div>
 </div>
+
+<script>
+// 展開效果
+$( "#ts_index_2" ).click(function() {
+  $( "#ts-more-news" ).fadeIn('slow');
+});
+</script>
+
 </section>
 </metal:row>
 
