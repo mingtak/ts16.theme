@@ -445,7 +445,8 @@ $( "#ts_index_2" ).click(function() {
 <b>主講│</b>
     </td>
     <td style="float:left">
-<b>Martin Sturm馬丁．史圖 ／奧地利林茲OK當代藝術中心館長<br>Jeff Khan傑夫．可汗／ 澳洲雪梨Performance Space藝術總監</b>
+<b><a href="http://talks.taishinart.org.tw/award/2016/committee/Martin_Sturm" target="_blank">Martin Sturm馬丁．史圖</a> ／ 奧地利林茲OK當代藝術中心館長<br>
+<a href="http://talks.taishinart.org.tw/award/2016/committee/Jeff_Khan" target="_blank">Jeff Khan傑夫．可汗</a>／ 澳洲雪梨Performance Space藝術總監</b>
     </td>
   </tr>
 
@@ -454,7 +455,7 @@ $( "#ts_index_2" ).click(function() {
 <b>主持│</b>
     </td>
     <td style="float:left">
-<b>徐文瑞 /獨立策展人、藝評家</b>
+<b><a target="_blank" href="${portal/absolute_url}/files/5f906587745e7c214ecb.pdf">徐文瑞</a> /獨立策展人、藝評家</b>
     </td>
   </tr>
 </table>
@@ -497,7 +498,7 @@ $( "#ts_index_2" ).click(function() {
 <b>主講│</b>
     </td>
     <td style="float:left">
-<b>Ong Keng Sen王景生／新加坡國際藝術節藝術總監</b>
+<b><a target="_blank" href="http://talks.taishinart.org.tw/award/2016/committee/Ong_Keng_Sen">Ong Keng Sen王景生</a>／新加坡國際藝術節藝術總監</b>
     </td>
   </tr>
 
@@ -506,7 +507,7 @@ $( "#ts_index_2" ).click(function() {
 <b>主持│</b>
     </td>
     <td style="float:left">
-<b>鴻鴻／詩人、劇場及電影導演</b>
+<b><a target="_blank" href="http://talks.taishinart.org.tw/award/2016/committee/hung_hung">鴻鴻</a>／詩人、劇場及電影導演</b>
     </td>
   </tr>
 </table>
@@ -641,7 +642,7 @@ $( "#ts_index_2" ).click(function() {
               凡在留言區寫下心目中遺珠作品名稱及理由，我們就送您ARTalks票夾。
         </div>
 <br><br>
-<div class="fb-comments" data-href="${portal/absolute_url}" data-width="100%" data-numposts="5"></div>
+<div class="fb-comments" data-href="${portal/absolute_url}" data-width="100%" data-num-posts="5"></div>
 
     </div>
 </div>

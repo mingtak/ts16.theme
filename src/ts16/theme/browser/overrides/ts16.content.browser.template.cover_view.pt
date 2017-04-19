@@ -43,12 +43,12 @@ random.shuffle(all_brain_for_poll)
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row12"/>
 <metal:macro use-macro="context/@@ts15_macro/macros/ts-row13"/>
 
+
 <div class="fixed">
     <a href="${portal/absolute_url}#ts-row12">
         <img class="pull-right" src="${prefix}images/vote_btn.png"/>
     </a>
 </div>
-
 
 
 <script type="text/javascript">
@@ -107,7 +107,7 @@ $('.bxslider').bxSlider({
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9&appId=574492115966443";
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9&appId=341860605908002";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
