@@ -140,7 +140,7 @@
 </nav>
     </div>
 <div class="col-md-12 navswitch">
-    <a href="javascript:void()" id="navswitch" class="pull-right">
+    <a href="javascript:void(0)" id="navswitch" class="pull-right">
         <i class="fa fa-bars fa-2x"></i>
     </a>
 </div>
@@ -191,7 +191,7 @@
 </nav>
     </div>
 <div class="col-md-12 navswitch">
-    <a href="javascript:void()" id="navswitch" class="pull-right">
+    <a href="javascript:void(0)" id="navswitch" class="pull-right">
         <i class="fa fa-bars fa-2x"></i>
     </a>
 </div>
@@ -458,7 +458,7 @@ $( "#ts_index_2" ).click(function() {
     </td>
   </tr>
 </table>
-            <p>Martin Sturm （馬丁．史圖）擔任林茲OK當代藝術中心館長長達25年，挖掘並開創大量實驗性的藝術策展，如「天空之城」，是林茲2009年「歐洲文化首都年」最大規模策展，至今影響深遠。Performance Space藝術總監Jeff Khan（傑夫・可汗）將1880年代的火車機房搖身變成多元且當代的表演藝術與策展空間，並開發各種場域的當代藝術可能性，與在地社群建立互動。兩位分別來自視覺藝術和表演藝術領域，都是致力於挖掘新的跨界創作與實踐，這裡有什麼新興的美學課題值得討論?在藝術的展演空間上有何什麼新的媒合、交集或衝撞？</p>
+            <p>Martin Sturm （馬丁．史圖）擔任林茲OK當代藝術中心(OK Offenes Kulturhaus Oberösterreich)館長長達25年，挖掘並開創大量實驗性的藝術策展，如「天空之城」，是林茲2009年「歐洲文化首都年」最大規模策展，至今影響深遠。Performance Space藝術總監Jeff Khan（傑夫・可汗）將1880年代的火車機房搖身變成多元且當代的表演藝術與策展空間，並開發各種場域的當代藝術可能性，與在地社群建立互動。兩位分別來自視覺藝術和表演藝術領域，都是致力於挖掘新的跨界創作與實踐，這裡有什麼新興的美學課題值得討論?在藝術的展演空間上有什麼新的媒合、交集或衝撞？</p>
 
 <p>◎現場英文逐步口譯。</p>
 <p>◎本活動免費參加，請先線上報名 <a target="_blank" href="http://www.taishinart.org.tw/chinese/9_registration/02_detail.php?pid=183">立即報名</a></p>
@@ -512,7 +512,7 @@ $( "#ts_index_2" ).click(function() {
 </table>
 
 
-            <p>新加坡揚名國際的劇場導演Ong Keng Sen王景生，他的創作橫跨全球各地，並曾受邀為柏林穿越藝術節策展，對於亞洲多元美學的發展多所貢獻。2014-2017年擔任新加坡國際藝術節藝術總監，更突破既有藝術節模式，帶領新加坡觀眾開創當代藝術的創新視野！王景生將分享自身執導跨文化劇場的經驗和反思、於柏林及新加坡推動藝術節的經驗、亞洲文化與西方劇場的交融產生什麼樣的火花？以及東西方傳統經典的當代意義？由鴻鴻導演銳敏提問，雙導交鋒對談精彩可期！</p>
+            <p>新加坡揚名國際的劇場導演Ong Keng Sen王景生，他的創作橫跨全球各地，曾為柏林的世界文化中心創辦《穿越藝術節》，並於2001-2003擔任藝術總監暨策展人，對於亞洲多元美學的發展多所貢獻。2014-2017年擔任新加坡國際藝術節總監，更突破既有藝術節模式，帶領新加坡觀眾開創當代藝術的創新視野！王景生將分享自身執導跨文化劇場的經驗和反思、於柏林及新加坡推動藝術節的經驗、亞洲文化與西方劇場的交融產生什麼樣的火花？以及東西方傳統經典的當代意義？由鴻鴻導演銳敏提問，雙導交鋒對談精彩可期！</p>
 
 <p>◎現場英文逐步口譯。</p>
 <p>◎本活動免費參加，請先線上報名 <a target="_blank" href="http://www.taishinart.org.tw/chinese/9_registration/02_detail.php?pid=184">立即報名</a></p>
@@ -624,12 +624,13 @@ $( "#ts_index_2" ).click(function() {
             <h4 class="TSAAindextitle01"><a href="${item/getURL}">${item/Title}</a></h4>
 <!--            <p class="TSAAindex02">${item/Description}</p> -->
             <a href="${item/getURL}"><img src="${item/getURL}/@@images/image/preview"/></a>
-            <a id="${item/UID}" class="btn btn-info btn-xs" href="javascript:void()" v-on:click="poll($event)">投票</a>
+            <a id="${item/UID}" class="btn btn-info btn-xs" href="javascript:void(0)" v-on:click="poll($event)">投票</a>
             <span style="font-size:12px; margin-left: 20px">累積票數:${python:view.voteCount.get(item.UID, 0)}</span>
         </div>
     </div>
     <div style="padding:0 auto; text-align:center">
-<!--        <input type="checkbox" id="voteConfirm">我已詳細閱讀並同意投票辦法<br> -->
+本人已詳細閱讀活動辦法並同意提供有效電子郵件信箱，作為本活動投票及獲獎通知使用；同時願意以該信箱獲得主辦單位寄送藝文活動資訊。<br>
+        <input type="checkbox" id="voteConfirm"><span style="color:red"> 願意請勾選</span><br>
         <a id="submitVote" class="btn btn-warning btn-lg inline cboxElement"
            href="#voteMessage"
            v-on:click="submitVote($event)">送出投票</a>
@@ -640,7 +641,7 @@ $( "#ts_index_2" ).click(function() {
               凡在留言區寫下心目中遺珠作品名稱及理由，我們就送您ARTalks票夾。
         </div>
 <br><br>
-<div class="fb-comments" data-href="http://ts15.babywith.me/" data-width="100%" data-numposts="5"></div>
+<div class="fb-comments" data-href="${portal/absolute_url}" data-width="100%" data-numposts="5"></div>
 
     </div>
 </div>
@@ -663,19 +664,6 @@ $( "#ts_index_2" ).click(function() {
 <div style="display:none">
     <div id="voteMessage"></div>
 </div>
-
-
-
-
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 </section>
 </metal:row>

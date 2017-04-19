@@ -1,10 +1,11 @@
-// login html
 function loginToPoll(){
     return '<h4>請輸入email以完成投票</h4> \
               <form action="to_vote"> \
                <input id="useremail" type="email" name="email"> \
                <input style="display:none" id="voteItems" type="text" name="voteItems" value="' + vm.vote + '"> \
-               <input type="submit" id="vote-submit" name="submit" class="btn bt-sm"> \
+               <input type="submit" id="vote-submit" name="submit" class="btn bt-sm btn-success"> \
+               <a onclick="parent.$.colorbox.close(); return false;" \
+                  class="btn btn-warning btn-s" style="margin-left:10px">取消</a> \
               </form>'
 }
 
@@ -27,7 +28,7 @@ var vm = new Vue({
     voteMessage: 'hello world',
     alert_1: '<h4>請選擇3個項目<a onclick="parent.$.colorbox.close(); return false;" \
               class="btn btn-warning btn-s" style="margin-left:20px">返回投票</a></h4>',
-    alert_2: '<h4>請勾選確認「我已詳細閱讀並同意投票辦法」以完成投票.<a onclick="parent.$.colorbox.close(); return false;" \
+    alert_2: '<h4>請勾選確認「 <span style="color:red">願意請勾選</span>」以完成投票.<a onclick="parent.$.colorbox.close(); return false;" \
               class="btn btn-warning btn-s" style="margin-left:20px">返回投票</a></h4>',
     alert_final: '<h4>投標完成，感謝您的投票</h4>',
   },
@@ -50,27 +51,23 @@ var vm = new Vue({
         };
         vm.vote.push(id);
         element.setAttribute('class', 'btn btn-success btn-xs');
-//        alert(classes);
     },
 
     submitVote: function (event) {
-/*        if(! $('#voteConfirm').is(":checked")){
+        if(! $('#voteConfirm').is(':checked')){
             $('#voteMessage').html(vm.alert_2);
             return;
         };
-*/
+
         if( vm.vote.length != 3 ){
             $('#voteMessage').html('<p><h4>每個帳號限投一次，每次須投滿三票不同作品<h4> \
               <h5>您已投 ' + vm.vote.length + ' 票，還需投 ' + (3-vm.vote.length) + ' 票</h5><a onclick="parent.$.colorbox.close(); return false;" \
               class="btn btn-warning btn-s" style="margin-left:20px">投票確認</a></h4></p>');
             return;
         };
-//        $('#voteMessage').html(vm.alert_final);
         $('#voteMessage').html(loginToPoll());
     },
-
   },
-
 });
 
 
@@ -83,6 +80,7 @@ $(document).ready(function(){
     // 投票後訊息
     var thanks = getParameterByName('thanks');
     var voted = getParameterByName('voted');
+
     if( voted == 1){
         alert('您已經參與過投票。');
         return;
