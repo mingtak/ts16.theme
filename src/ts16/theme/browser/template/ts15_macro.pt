@@ -225,18 +225,18 @@
         </div>
     </div>
 
-    <div class="col-md-12" tal:repeat="item items">
-<div class="news-content">
-        <p class="TSAAindextime">${python:item.created.strftime('%m.%d.%Y')}</p>
-      <p class="TSAAindextitle01"><u><a href="${item/getURL}">${item/Title}</a></u></p>
-    <p class="TSAAindextext">${item/Description}</p>
-    <hr tal:condition="not:repeat/item/end">
-    <a href="/" tal:condition="repeat/item/end" id="ts_index_2">
-        <img class="read-more" src="${prefix}images/15th-TSAA_index_25.jpg"/>
-    </a>
-
-</div>
+    <div class="col-md-12" tal:repeat="item items>
+        <div class="news-content">
+            <p class="TSAAindextime">${python:item.created.strftime('%m.%d.%Y')}</p>
+            <p class="TSAAindextitle01"><u><a href="${item/getURL}">${item/Title}</a></u></p>
+            <p class="TSAAindextext">${item/Description}</p>
+            <hr tal:condition="not:repeat/item/end">
+            <a href="/" tal:condition="repeat/item/end" id="ts_index_2">
+                <img class="read-more" src="${prefix}images/15th-TSAA_index_25.jpg"/>
+            </a>
+        </div>
     </div>
+
   </div>
 </div>
 </section>
@@ -587,14 +587,15 @@
     </div>
     <div class="col-md-12">
         <br>
-        <p class="title">【我心目中的得主】</p>
         <p class="desc">── 為心中所屬，投下鼓舞的一票！──</p>
-        <p class="desc">第15屆台新藝術獎網路活動</p>
     </div>
     <div class="col-md-12">
         <div class="info">
-            <p>專家有專家的說法，我有我的摯愛！為心中所屬，投下鼓舞的一票！<br>當摯愛得獎，BINGO！他得獎金，您將有機會抽獎得好禮！<br>4/20起，投票啟動</p>
-<!--            <a href="#"><u>活動辦法</u></a> -->
+            <p>十九件入圍作品裡，哪一件最讓您印象深刻？<br>
+               選出您心中的大獎得主，投您所好，還能把好禮帶回家！<br>
+即日起至2017年5月12日12:00PM止<br>
+以E-Mail進行投票，需投滿三票，作品不得重複投票，每個帳號均僅能進行一次投票<br>
+            <a href="${portal/absolute_url}/event_desc"><u>活動辦法</u></a></p>
         </div>
     </div>
 
@@ -605,14 +606,23 @@
             <h4 class="TSAAindextitle01"><a href="${item/getURL}">${item/Title}</a></h4>
 <!--            <p class="TSAAindex02">${item/Description}</p> -->
             <a href="${item/getURL}"><img src="${item/getURL}/@@images/image/preview"/></a>
-            <a id="${item/UID}" class="btn btn-info btn-xs" href="javascript:void()" v-on:click="poll($event)">投我一票</a>
-            <span style="font-size:12px; margin-left: 20px">目前得票數:${python:view.voteCount.get(item.UID, 0)}</span>
+            <a id="${item/UID}" class="btn btn-info btn-xs" href="javascript:void()" v-on:click="poll($event)">投票</a>
+            <span style="font-size:12px; margin-left: 20px">累積票數:${python:view.voteCount.get(item.UID, 0)}</span>
         </div>
     </div>
     <div style="padding:0 auto; text-align:center">
+<!--        <input type="checkbox" id="voteConfirm">我已詳細閱讀並同意投票辦法<br> -->
         <a id="submitVote" class="btn btn-warning btn-lg inline cboxElement"
            href="#voteMessage"
            v-on:click="submitVote($event)">送出投票</a>
+            <br><br><hr><br>
+        <div style="font-size:16px;">
+              如在本屆19組入圍作品之外，您尚有心目中的年度佳作卻未入圍之遺憾，<br>
+              歡迎您針對本屆未入圍之遺珠作品，在留言區表達您的看法。<br>
+              凡在留言區寫下心目中遺珠作品名稱及理由，我們就送您ARTalks票夾。
+        </div>
+<br><br>
+<div class="fb-comments" data-href="http://ts15.babywith.me/" data-width="100%" data-numposts="5"></div>
 
     </div>
 </div>
@@ -623,19 +633,7 @@
 
 
   <div class="row">
-<!--
-    <div class="col-md-3"></div>
-    <div class="col-md-6 bottom">
 
-台新藝術獎頒獎典禮在即。
-然而在這份名單之外，必然有許多遺珠之憾。
-2016年除了台新藝術獎入圍作品之外，在你心中遺漏了哪些作品？
-只要寫下心目中遺珠之憾作品及理由，就可獲得小禮物。
-<p><a><img src="${prefix}images/15th-TSAA_index_60.png"/></a></p>
-
-    </div>
-    <div class="col-md-3"></div>
--->
     <div class="col-md-12">
         <a href="#"><img src="${prefix}images/15th-TSAA_index_91.png" class="pull-right to-top"></a>
     </div>
@@ -647,6 +645,19 @@
 <div style="display:none">
     <div id="voteMessage"></div>
 </div>
+
+
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 </section>
 </metal:row>
