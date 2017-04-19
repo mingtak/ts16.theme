@@ -606,12 +606,14 @@
 <!--            <p class="TSAAindex02">${item/Description}</p> -->
             <a href="${item/getURL}"><img src="${item/getURL}/@@images/image/preview"/></a>
             <a id="${item/UID}" class="btn btn-info btn-xs" href="javascript:void()" v-on:click="poll($event)">投我一票</a>
+            <span style="font-size:12px; margin-left: 20px">目前得票數:${python:view.voteCount.get(item.UID, 0)}</span>
         </div>
     </div>
     <div style="padding:0 auto; text-align:center">
-        <a id="submitVote" class="btn btn-warning btn-lg"
-           href="javascript:void()"
+        <a id="submitVote" class="btn btn-warning btn-lg inline cboxElement"
+           href="#voteMessage"
            v-on:click="submitVote($event)">送出投票</a>
+
     </div>
 </div>
 
@@ -641,6 +643,11 @@
   </div>
 
 </div>
+
+<div style="display:none">
+    <div id="voteMessage"></div>
+</div>
+
 </section>
 </metal:row>
 
