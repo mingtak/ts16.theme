@@ -235,7 +235,7 @@
     </div>
 
     <section id="ts-more-news" style="display:none">
-    <div class="col-md-12" tal:repeat="item items">
+    <div class="col-md-12" tal:repeat="item python:items[5:]">
         <div class="news-content">
             <p class="TSAAindextime">${python:item.created.strftime('%m.%d.%Y')}</p>
             <p class="TSAAindextitle01"><u><a href="${item/getURL}">${item/Title}</a></u></p>
