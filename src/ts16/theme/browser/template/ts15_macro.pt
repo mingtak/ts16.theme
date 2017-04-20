@@ -365,12 +365,12 @@ $( "#ts_index_2" ).click(function() {
         <ul class="bxslider">
             <li>
                 <div style="max-width:100%; overflow:hidden">
-        <img src="${portal/absolute_url}/images/01.jpg">
+        <img src="${portal/absolute_url}/images/01.jpg/@@images/image/large">
                 </div>
             </li>
             <li>
                 <div style="max-width:100%; overflow:hidden">
-        <img src="${portal/absolute_url}/images/02.jpg">
+        <img src="${portal/absolute_url}/images/02.jpg/@@images/image/large">
                 </div>
             </li>
 
