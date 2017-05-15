@@ -29,9 +29,8 @@
     <div class="container">
       <div class="row">
         <div id="ts-header-yt" class="col-md-7 col-sm-12 ts-header-left" valign="top" style="height:344px;background-image:url(${prefix}images/15th-TSAA_index_02.jpg)">
-            <iframe width="100%" height="320" src="https://www.youtube.com/embed/KLmnHyOmvEw?autoplay=1&rel=0"
+            <iframe width="100%" height="320" src="https://www.youtube.com/embed/OMahBEjlE0Y?autoplay=1&rel=0"
                     frameborder="0" allowfullscreen style="padding-top:30px"></iframe>
-
         </div>
         <div id="ts-header-bn" class="col-md-5"><img src="${prefix}images/15th-TSAA_index_03.jpg"></div>
       </div>
@@ -606,7 +605,7 @@ $( "#ts_index_2" ).click(function() {
     </div>
     <div class="col-md-12">
         <br>
-        <p class="desc">── 為心中所屬，投下鼓舞的一票！──</p>
+        <p class="desc">── 為心中所屬，投下鼓舞的一票！<span style="color:red">(活動已截止)</span>──</p>
     </div>
     <div class="col-md-12">
         <div class="info">
@@ -614,7 +613,7 @@ $( "#ts_index_2" ).click(function() {
                選出您心中的大獎得主，投您所好，還能把好禮帶回家！<br>
 即日起至2017年5月12日12:00PM止<br>
 以E-Mail進行投票，需投滿三票，作品不得重複投票，每個帳號均僅能進行一次投票<br>
-            <a href="${portal/absolute_url}/event_desc"><u>活動辦法</u></a></p>
+<!--            <a href="${portal/absolute_url}/event_desc"><u>活動辦法</u></a></p> -->
         </div>
     </div>
 
@@ -625,16 +624,16 @@ $( "#ts_index_2" ).click(function() {
             <h4 class="TSAAindextitle01"><a href="${item/getURL}">${item/Title}</a></h4>
 <!--            <p class="TSAAindex02">${item/Description}</p> -->
             <a href="${item/getURL}"><img src="${item/getURL}/@@images/image/preview"/></a>
-            <a id="${item/UID}" class="btn btn-info btn-xs" href="javascript:void(0)" v-on:click="poll($event)">投票</a>
+<!--            <a id="${item/UID}" class="btn btn-info btn-xs" href="javascript:void(0)" v-on:click="poll($event)">投票</a> -->
             <span style="font-size:12px; margin-left: 20px">累積票數:${python:view.voteCount.get(item.UID, 0)}</span>
         </div>
     </div>
     <div style="padding:0 auto; text-align:center">
-本人已詳細閱讀活動辦法並同意提供有效電子郵件信箱，作為本活動投票及獲獎通知使用；同時願意以該信箱獲得主辦單位寄送藝文活動資訊。<br>
+<!-- 本人已詳細閱讀活動辦法並同意提供有效電子郵件信箱，作為本活動投票及獲獎通知使用；同時願意以該信箱獲得主辦單位寄送藝文活動資訊。<br>
         <input type="checkbox" id="voteConfirm"><span style="color:red"> 願意請勾選</span><br>
         <a id="submitVote" class="btn btn-warning btn-lg inline cboxElement"
            href="#voteMessage"
-           v-on:click="submitVote($event)">送出投票</a>
+           v-on:click="submitVote($event)">送出投票</a> -->
             <br><br><hr><br>
         <div style="font-size:16px;">
               如在本屆19組入圍作品之外，您尚有心目中的年度佳作卻未入圍之遺憾，<br>
@@ -701,6 +700,18 @@ $( "#ts_index_2" ).click(function() {
     </div>
   </div>
 </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-39975455-5', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </section>
 </metal:row>
 

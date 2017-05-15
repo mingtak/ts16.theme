@@ -17,7 +17,7 @@ from plone import api
 import random
 portal = api.portal.get()
 prefix = '%s/++theme++taishin-16th/' % portal.absolute_url()
-news_brain = api.content.find(context=portal['news'], Type=['Page', 'Link'], review_state='published', sort_on='modified', sort_order='reverse', sort_limit=10)[:10]
+news_brain = api.content.find(context=portal['news'], Type=['Page', 'Link'], review_state='published', sort_on='modified', sort_order='reverse')
 show_brain = api.content.find(context=portal['contents'], Subject='表演藝術', Type='Page', sort_on='id')
 visual_brain = api.content.find(context=portal['contents'], Subject='視覺藝術', Type='Page', sort_on='id')
 all_brain = api.content.find(context=portal['contents'], Type='Page', sort_on='id')
